@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Hello Django Login and SignUP</h1>
+    <a href="{% url 'signin' %}">Login</a><br>
+    <a href="{% url 'signup' %}">SignUP</a><br>
+    {% if user.is_authenticated %}
+        {{ user.username }}
+        <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+        로그인을 해주세용
+    {% endif %}
+</body>
+</html>
